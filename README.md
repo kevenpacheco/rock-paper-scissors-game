@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Link
 
-[Demo](https://qr-code-component-keven.netlify.app/)
+[Demo](https://rock-paper-scissors-game-keven.netlify.app/)
 
 ## My process
 

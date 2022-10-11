@@ -1,0 +1,66 @@
+@use '../../assets/styles/colors';
+
+.Rules {
+  position: absolute;
+  inset: 0;
+  background: colors.$white;
+  display: grid;
+  place-items: center;
+  gap: 2.4rem;
+
+  p {
+    color: colors.$dark-text;
+    font-size: 2.4rem;
+  }
+
+  & > img {
+    width: 100%;
+    max-width: 304px;
+    height: auto;
+  }
+
+  & > button {
+    width: 100%;
+    max-width: 36px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+    
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: calc(100% - 15px);
+      height: auto;
+    }
+  }
+
+  @media (min-width: 375px) {
+    inset: initial;
+    max-width: 325px;
+    padding: 2.4rem;
+    border-radius: 15px;
+    place-items: start;
+    grid-template-areas: 
+      'title button'
+      "img img"
+    ;
+
+    & > p {
+      grid-area: title;
+    }
+
+    & > img {
+      grid-area: img;
+    }
+
+    & > button {
+      grid-area: button;
+      place-self: end;
+    }
+  }
+}

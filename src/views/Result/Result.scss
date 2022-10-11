@@ -1,0 +1,82 @@
+@use "../../assets/styles/colors";
+
+.Result {
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+
+  &__picked {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    grid-row: 1 / 2;
+    place-self: flex-start;
+
+    &--player {
+      grid-column: 1 / 2;
+    }
+  
+    &--machine {
+      grid-column: 2 / 3;
+    }
+  }
+
+
+  &__result {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+
+    p {
+      color: colors.$white;
+      font-size: 5rem;
+      text-align: center;
+    }
+
+    .Button {
+      padding: 1.2rem 1.6rem;
+    }
+  }
+
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr max-content 1fr;
+
+    &__picked{
+      flex-direction: column-reverse;
+
+      &--player,
+      &--machine {
+        grid-row: initial;
+        grid-column: 3 / 4;
+      }
+      
+      &--player {
+        grid-column: initial;
+      }
+
+      &--machine {
+        grid-column: 3 / 4;
+      }
+    }
+
+    &__result {
+      grid-row: initial;
+      grid-column: initial;
+    }
+
+    &__result {
+      p {
+        font-size: 3rem;
+      }
+    }
+  }
+}

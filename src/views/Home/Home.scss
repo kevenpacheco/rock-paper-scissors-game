@@ -1,0 +1,41 @@
+@use '../../assets/styles/colors';
+
+.Home {
+  background: url('../../assets/images/bg-triangle.svg') no-repeat center;
+  background-size: contain;
+  background-origin: content-box;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 300px;
+  padding: 35px;
+
+  & > button {
+    width: 100%;
+    max-width: 110px;
+    position: absolute;
+    cursor: pointer;
+    
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      top: 0;
+      right: 0;
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: 375px) {
+    & > button {
+      max-width: 120px;
+    }
+  } 
+}

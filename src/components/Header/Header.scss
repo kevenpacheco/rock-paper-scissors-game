@@ -1,0 +1,52 @@
+@use '../../assets/styles/colors';
+
+.Header {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+  padding: .8rem;
+  border: 2px solid colors.$header-outline;
+  border-radius: 5px;
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2rem;
+  }
+
+  &__score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.4rem 2rem;
+    background: colors.$white;
+    border-radius: 5px;
+
+    p:first-child {
+      color: colors.$score-text;
+      font-size: 1rem;
+    }
+    
+    p:last-child {
+      color: colors.$dark-text;
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 375px) {
+    border-radius: 10px;
+    padding: 1.6rem;
+
+    &__options {
+      font-size: 2.4rem;
+      line-height: 1.9rem;
+    }
+
+    &__score {
+      padding: 0.8rem 2.4rem;
+    }
+  }
+}

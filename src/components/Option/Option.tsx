@@ -25,22 +25,25 @@ export const PICK_OPTIONS_MAPPER = {
 export type PickOptionType = keyof typeof PICK_OPTIONS_MAPPER;
 
 type Props = {
-  option: PickOptionType | null
+  option: PickOptionType | null;
 };
 
 export const Option = ({ option }: Props) => {
   const hasOption = !!option && PICK_OPTIONS_MAPPER[option];
 
   return (
-    <div
-      className={classnames("Option", { [`Option--${option}`]: !!hasOption })}
-    >
+    <div className="Option">
       <div
         className={classnames("Option__container", {
-          [`Option__container--has-option`]: !!hasOption,
+          [`Option__container--${option} Option__container--has-option`]:
+            !!hasOption,
         })}
       >
-        {!!hasOption && <img src={PICK_OPTIONS_MAPPER[option].image} alt={option} />}
+        {!!hasOption && (
+          <div>
+            <img src={PICK_OPTIONS_MAPPER[option].image} alt={option} />
+          </div>
+        )}
       </div>
     </div>
   );

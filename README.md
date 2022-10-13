@@ -1,6 +1,6 @@
-# Rock, Paper, Scissor Game
+# Rock, Paper, Scissors Game
 
-This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+Rock, Paper, Scissors is a very popular game. So, inspired by one of the challenges of the [Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH) website, I created this game in order to learn more about Typescript and React.
 
 ## Table of contents
 
